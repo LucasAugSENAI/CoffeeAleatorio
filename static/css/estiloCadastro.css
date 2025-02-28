@@ -1,0 +1,162 @@
+/* From Uiverse.io by mrhyddenn */
+button {
+    background: #fff;
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    width: 120px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+}
+
+span {
+    display: inline-block;
+    transform: skew(21deg);
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: rgb(120, 97, 4);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+button:hover {
+    color: #fff;
+}
+
+button:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f1e1;
+    color: #5a3e2b;
+}
+
+header {
+    background-color: #3e2723;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    /*width: 100%;*/
+    max-width: 100%;
+    width: 1500px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #6d4c41;
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px;
+}
+
+.hero img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+footer {
+    background-color: #3e2723;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.imgs img{
+    width: 300px;
+}
+
+.bnt{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.botao{
+    margin-top: 30px;
+}
+
+.bnt button{
+    width: 200px;
+}
+
+
+.input {
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: #e8e8e8;
+    box-shadow: 20px 20px 60px #c5c5c5,
+    -20px -20px 60px #ffffff;
+    transition: 0.3s;
+    margin-left: 100px;
+}
+
+.input:focus {
+    outline-color: #e8e8e8;
+    background: #e8e8e8;
+    box-shadow: inset 20px 20px 60px #c5c5c5,
+    inset -20px -20px 60px #ffffff;
+    transition: 0.3s;
+}
+
+.ImagensAPI{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+button a{
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+}
+
+button a:hover{
+    color: white;
+}
+
+.descricao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
