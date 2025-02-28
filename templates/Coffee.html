@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Perfeito</title>
+    <link rel="stylesheet" href="../static/css/estiloCadastro.css">
+</head>
+<body>
+<header>
+    <h1>Café Perfeito</h1>
+</header>
+<nav>
+    <a href="/">Home</a>
+      <a href="/coffe">Cadastro</a>
+      <a href="/galeria">Galeria</a>
+</nav>
+    <section class="hero">
+        <h2>Escolha um café para cadastrar</h2>
+    </section>
+    <section class="ImagensAPI">
+        <div class="imgs">
+            <img  src="{{ imagem }}" alt="imagem aleatoria">
+        </div>
+        <div class="descricao">
+            <form action="/criar" method="POST">
+                <input type="text" class="input" name="descricao" id="descricao" placeholder="Digite uma descrição">
+                     <input type="hidden" id="url" name="url" value="{{ imagem }}" >
+                <div class="bnt">
+            <div class="botao">
+                <button><span><a href="/coffe">Gerar Imagem</a></span></button>
+            </div>
+            <div class="botao">
+                <button type="submit"><span><a>Cadastrar</a></span></button>
+            </div>
+        </div>
+            </form>
+        </div>
+    </section>
+    <section class="content" id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Somos apaixonados por café e oferecemos os melhores grãos selecionados para você.</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Café Perfeito. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

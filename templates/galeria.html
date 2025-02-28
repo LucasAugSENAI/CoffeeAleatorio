@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Perfeito</title>
+    <link rel="stylesheet" href="../static/css/estiloGaleria.css">
+</head>
+<body>
+    <header>
+        <h1>Café Perfeito</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/coffe">Cadastro</a>
+        <a href="/galeria">Galeria</a>
+    </nav>
+    <section class="hero">
+        <h2>Cafés Cadastrados</h2>
+    </section>
+    <section class="ImagesCadastradas">
+            {% for fotos in imagensbd %}
+                <div class="ImgCad">
+                <figure>
+                    <a href="{{ fotos[1] }}"><img src="{{ fotos[1] }}" alt="{{ fotos[0] }}"></a>
+                    <figcaption class="descricao">{{ fotos[0] }}*</figcaption>
+                </figure>
+                  </div>
+            {% endfor %}
+
+    </section>
+    <section class="botoes">
+        <div class="bnt">
+            <div class="botao">
+                <button><span><a href="/coffe">Outro Cadastro</a></span></button>
+            </div>
+            <div class="botao">
+                <button><span><a href="/">Home</a></span></button>
+            </div>
+        </div>
+    </section>
+    <section class="content" id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Somos apaixonados por café e oferecemos os melhores grãos selecionados para você.</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Café Perfeito. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
